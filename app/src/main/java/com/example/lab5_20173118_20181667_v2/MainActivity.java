@@ -133,7 +133,9 @@ public class MainActivity extends AppCompatActivity {
                     users.setProfile(user.getPhotoUrl().toString());
 
                     database.getReference().child("users").child(user.getUid()).setValue(users);
+                    String nameUser = user.getDisplayName();
                     Intent intent = new Intent(MainActivity.this, ListadoDoctor.class);
+                    intent.putExtra("name", nameUser);
                     startActivity(intent);
 
                 }else{
