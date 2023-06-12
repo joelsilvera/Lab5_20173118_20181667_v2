@@ -10,7 +10,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
         android:layout_marginTop="52dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.02"
@@ -19,34 +18,33 @@
         android:textColor="#198eb6"
         android:textSize="26sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="26dp"
+        android:layout_width="358dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.02"
         android:lineSpacingExtra="0sp"
         android:text="TeleDoctor es un app diseñada por estudiantes de Ingenieria de Telecomunicaciones"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/txtCorreo2"
         android:layout_width="290dp"
         android:layout_height="49dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ingrese su correo"
         android:inputType="textPersonName"
@@ -54,46 +52,48 @@
         android:textColorHint="#858585"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
         android:text="Contraseña"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo2" />
 
     <Button
         android:id="@+id/botonIngresar2"
         android:layout_width="232dp"
         android:layout_height="50dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="36dp"
         android:backgroundTintMode="add"
         android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="416dp"
-        android:text="Recuperar contraseña"
+    <ImageButton
+        android:id="@+id/botonGoogleLogIn"
+        android:layout_width="237dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2"
+        app:srcCompat="@drawable/signgoogle" />
 
     <ImageButton
         android:id="@+id/botonFacebookLog"
         android:layout_width="209dp"
         android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonGoogleLogIn"
         app:srcCompat="@drawable/signfacebook" />
@@ -102,19 +102,29 @@
         android:id="@+id/signUpRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:text="Eres nuevo? Regístrate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonFacebookLog" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="20dp"
+        android:text="Recuperar contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="220dp"
-        android:text="Correo o Email"
+        android:text="Correo "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,8 +132,8 @@
         android:id="@+id/txtPassword2"
         android:layout_width="290dp"
         android:layout_height="49dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ingrese su contraseña"
         android:inputType="textPersonName"
@@ -131,17 +141,6 @@
         android:textColorHint="#858585"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/botonGoogleLogIn"
-        android:layout_width="209dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2"
-        app:srcCompat="@drawable/signgoogle" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
