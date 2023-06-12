@@ -1,6 +1,9 @@
 package com.example.lab5_20173118_20181667_v2.model;
 
-public class UsuarioDto {
+import java.io.Serializable;
+
+public class UsuarioDto implements Serializable {
+
     private String nombre;
     private String apellido;
     private String pais;
@@ -13,6 +16,9 @@ public class UsuarioDto {
     private String numero;
     private String nacionalidad;
     private String foto;
+
+    public UsuarioDto(){}
+
 
     public String getFoto() {
         return foto;
