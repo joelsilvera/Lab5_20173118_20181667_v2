@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         botonIngresar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!validateUsername() | !validatePassword()){
+                if(!(validateUsername() && validatePassword())){
 
                 }else{
                     checkUser();
@@ -107,9 +107,24 @@ public class MainActivity extends AppCompatActivity {
 
                 if(snapshot.exists()){
                     txtCorreo2.setError(null);
-                    String passwordFromDB = snapshot.child(correo).child("password").getValue(String.class);
 
-                    if(!Objects.equals(passwordFromDB, password)){
+                    /*
+                    String nombreChild = null;
+                    for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                        for(DataSnapshot valuesSnapshot: userSnapshot.getChildren()){
+                            if(valuesSnapshot.getValue().equals(correo)){
+                                nombreChild = userSnapshot.getValue(String.class);
+                            }
+                        }
+                    }
+                    */
+
+                    String passwordFromDB = null;
+                    for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                        passwordFromDB = userSnapshot.child("password").getValue(String.class);
+                    }
+
+                    if(passwordFromDB.equals(password)){
                         txtCorreo2.setError(null);
                         Intent intent = new Intent(MainActivity.this, ListadoDoctor.class);
                         startActivity(intent);
@@ -117,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
                         txtPassword2.setError("Contraseña incorrecta");
                         txtPassword2.requestFocus();
                     }
+
                 }else{
                     txtCorreo2.setError("Este correo no está registrado");
                     txtCorreo2.requestFocus();
