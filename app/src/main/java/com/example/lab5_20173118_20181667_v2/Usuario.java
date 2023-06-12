@@ -6,6 +6,17 @@ public class Usuario {
     private String password;
     private String telefono;
 
+
+    public Usuario(String email, String name, String password, String telefono) {
+        this.setEmail(email);
+        this.setName(name);
+        this.setPassword(password);
+        this.setTelefono(telefono);
+    }
+
+    public Usuario() {
+    }
+
     public String getEmail() {
         return email;
     }

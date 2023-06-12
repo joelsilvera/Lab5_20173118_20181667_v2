@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/botonIngresar"
+        android:id="@+id/botonIngresar2"
         android:layout_width="268dp"
         android:layout_height="52dp"
         android:layout_marginStart="84dp"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/botonGoogle" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/txtPassword2"
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:layout_marginStart="64dp"
@@ -117,10 +117,10 @@
         android:backgroundTintMode="add"
         android:text="boton por mientras hacia Listado de Doctores"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpRedirectText" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/signUpRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
@@ -138,10 +138,10 @@
         android:backgroundTintMode="add"
         android:text="Sign with google"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonIngresar" />
+        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/txtCorreo2"
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:layout_marginStart="68dp"
