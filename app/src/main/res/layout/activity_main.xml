@@ -63,9 +63,9 @@
 
     <Button
         android:id="@+id/botonIngresar2"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="84dp"
+        android:layout_width="232dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="420dp"
         android:backgroundTintMode="add"
         android:text="Ingresar"
@@ -81,17 +81,6 @@
         android:text="Recuperar contraseña"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/botonFacebook"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTintMode="add"
-        android:text="Sign with facebook"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonGoogle" />
 
     <EditText
         android:id="@+id/txtPassword2"
@@ -113,32 +102,19 @@
         android:layout_width="212dp"
         android:layout_height="55dp"
         android:layout_marginStart="172dp"
-        android:layout_marginTop="20dp"
         android:backgroundTintMode="add"
         android:text="boton por mientras hacia Listado de Doctores"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpRedirectText" />
+        tools:layout_editor_absoluteY="664dp" />
 
     <TextView
         android:id="@+id/signUpRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
-        android:layout_marginTop="8dp"
         android:text="Eres nuevo? Regístrate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonFacebook" />
-
-    <Button
-        android:id="@+id/botonGoogle"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTintMode="add"
-        android:text="Sign with google"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2" />
+        tools:layout_editor_absoluteY="625dp" />
 
     <EditText
         android:id="@+id/txtCorreo2"
@@ -154,5 +130,27 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonGoogleLogIn"
+        android:layout_width="209dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2"
+        app:srcCompat="@drawable/signgoogle" />
+
+    <ImageButton
+        android:id="@+id/botonFacebookLog"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGoogleLogIn"
+        app:srcCompat="@drawable/signfacebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
