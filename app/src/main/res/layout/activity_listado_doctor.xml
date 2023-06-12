@@ -6,23 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ListadoDoctor">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_margin="16dp"
-        android:text="Button"
-        app:backgroundTint="@color/black"
-        app:elevation="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewDr"
         android:layout_width="391dp"
         android:layout_height="667dp"
         android:layout_marginTop="48dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,5 +40,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/botonAitel"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@android:color/transparent"
+        android:tint="@color/turquesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="top|right"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
