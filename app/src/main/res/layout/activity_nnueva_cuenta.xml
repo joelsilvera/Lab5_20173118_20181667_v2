@@ -117,46 +117,24 @@
         android:id="@+id/botonIngresar2"
         android:layout_width="219dp"
         android:layout_height="49dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/turquesa"
         android:backgroundTintMode="add"
         android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/botonGoogle"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTintMode="add"
-        android:text="Sign with google"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2" />
-
-    <Button
-        android:id="@+id/botonFacebook"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTintMode="add"
-        android:text="Sign with facebook"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonGoogle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
 
     <TextView
-        android:id="@+id/signUpRedirectText"
+        android:id="@+id/loginRedirectText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="24dp"
         android:text="Ya tienes una cuenta? Ingresa"
         android:textColor="@color/turquesa"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonFacebook" />
+        tools:layout_editor_absoluteY="774dp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -167,6 +145,29 @@
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonGoogle"
+        android:layout_width="222dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonIngresar2"
+        app:srcCompat="@drawable/signgoogle" />
+
+    <ImageButton
+        android:id="@+id/botonFacebook"
+        android:layout_width="233dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGoogle"
+        app:srcCompat="@drawable/signfacebook" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

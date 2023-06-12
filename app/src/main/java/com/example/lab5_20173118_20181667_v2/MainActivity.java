@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         txtCorreo2 = findViewById(R.id.txtCorreo2);
         txtPassword2 = findViewById(R.id.txtPassword2);
         botonIngresar2 = findViewById(R.id.botonIngresar2);
-        signUpRedirectText = findViewById(R.id.signUpRedirectText);
+        signUpRedirectText = findViewById(R.id.botonFacebook);
 
         botonIngresar2.setOnClickListener(new View.OnClickListener() {
             @Override

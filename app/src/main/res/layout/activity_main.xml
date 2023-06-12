@@ -100,7 +100,7 @@
         app:srcCompat="@drawable/signfacebook" />
 
     <TextView
-        android:id="@+id/signUpRedirectText"
+        android:id="@+id/botonFacebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
