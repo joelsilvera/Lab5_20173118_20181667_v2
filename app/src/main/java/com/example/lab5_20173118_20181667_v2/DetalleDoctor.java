@@ -42,5 +42,11 @@ public class DetalleDoctor extends AppCompatActivity {
                 .resize(400, 420)
                 .into(binding.imageDetailDr);
 
+        binding.button2.setOnClickListener(view -> {
+            Intent intent1 = new Intent(DetalleDoctor.this, CitaAgendadaExitosa.class);
+            intent1.putExtra("name", usuarioDto.getApellido());
+            startActivity(intent1);
+        });
+
     }
 }
