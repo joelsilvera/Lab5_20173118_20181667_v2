@@ -93,22 +93,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonGoogle" />
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="290dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="308dp"
-        android:background="@color/material_dynamic_neutral90"
-        android:ems="10"
-        android:hint="Ingrese su contraseña"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColorHint="#858585"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/botonPorMientras"
         android:layout_width="212dp"
@@ -140,21 +124,5 @@
         android:text="Sign with google"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonIngresar" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="290dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="216dp"
-        android:background="@color/material_dynamic_neutral90"
-        android:ems="10"
-        android:hint="Ingrese su correo"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColorHint="#858585"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
