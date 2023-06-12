@@ -5,8 +5,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.lab5_20173118_20181667_v2.databinding.ActivityListadoDoctorBinding;
 import com.example.lab5_20173118_20181667_v2.model.Doctor;
@@ -31,6 +36,8 @@ import retrofit2.Response;
 
 public class ListadoDoctor extends AppCompatActivity {
 
+    ImageButton botonAitel;
+    TextView titleName;
     ActivityListadoDoctorBinding binding;
 
     private static final String msg_test = "dr-list";
@@ -41,6 +48,12 @@ public class ListadoDoctor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityListadoDoctorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        //Para colocar datos del login
+        titleName = findViewById(R.id.titleName);
+
+
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         firebaseDatabase.getReference().child("doctors").addValueEventListener(new ValueEventListener() {
@@ -75,9 +88,28 @@ public class ListadoDoctor extends AppCompatActivity {
             cargarLista();
         });
 
+        String nameUser = showUserData();
+
+        //Para ir al Perfil
+        botonAitel = (ImageButton) findViewById(R.id.botonAitel);
+        botonAitel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListadoDoctor.this, Perfil.class);
+                intent.putExtra("name", nameUser);
+                startActivity(intent);
+            }
+        });
 
     }
 
+
+    public String showUserData(){
+        Intent intent = getIntent();
+        String nameUser = intent.getStringExtra("name");
+        titleName.setText(nameUser);
+        return nameUser;
+    }
 
     public void cargarLista() {
         DoctorRepository doctorRepository = RetrofitBuilder.createRepo("https://randomuser.me");

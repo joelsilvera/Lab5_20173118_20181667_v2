@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="26dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.02"
@@ -37,7 +37,22 @@
         android:textSize="18sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCorreo2"
+        android:layout_width="290dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="256dp"
+        android:ems="10"
+        android:hint="Ingrese su correo"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="#858585"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,18 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="320dp"
         android:text="Contraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="180dp"
-        android:text="Correo o Email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +71,7 @@
         android:layout_width="232dp"
         android:layout_height="50dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="472dp"
         android:backgroundTintMode="add"
         android:text="Ingresar"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,8 +82,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="416dp"
         android:text="Recuperar contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonFacebookLog"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGoogleLogIn"
+        app:srcCompat="@drawable/signfacebook" />
+
+    <TextView
+        android:id="@+id/signUpRedirectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="48dp"
+        android:text="Eres nuevo? Regístrate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonFacebookLog" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="220dp"
+        android:text="Correo o Email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,44 +122,10 @@
         android:id="@+id/txtPassword2"
         android:layout_width="290dp"
         android:layout_height="49dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="360dp"
         android:ems="10"
         android:hint="Ingrese su contraseña"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColorHint="#858585"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/botonPorMientras"
-        android:layout_width="212dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="172dp"
-        android:backgroundTintMode="add"
-        android:text="boton por mientras hacia Listado de Doctores"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="664dp" />
-
-    <TextView
-        android:id="@+id/signUpRedirectText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:text="Eres nuevo? Regístrate"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="625dp" />
-
-    <EditText
-        android:id="@+id/txtCorreo2"
-        android:layout_width="290dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="216dp"
-        android:ems="10"
-        android:hint="Ingrese su correo"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textColorHint="#858585"
@@ -136,21 +138,10 @@
         android:layout_width="209dp"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonIngresar2"
         app:srcCompat="@drawable/signgoogle" />
-
-    <ImageButton
-        android:id="@+id/botonFacebookLog"
-        android:layout_width="209dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonGoogleLogIn"
-        app:srcCompat="@drawable/signfacebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

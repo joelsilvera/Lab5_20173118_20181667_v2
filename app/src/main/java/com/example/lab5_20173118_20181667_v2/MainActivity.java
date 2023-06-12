@@ -55,18 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //Para ir al listado de Doctores directamente
-        botonPorMientras = (Button)findViewById(R.id.botonPorMientras);
-        botonPorMientras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, ListadoDoctor.class);
-                startActivity(myIntent);
-            }
-        });
-
-
         txtCorreo2 = findViewById(R.id.txtCorreo2);
         txtPassword2 = findViewById(R.id.txtPassword2);
         botonIngresar2 = findViewById(R.id.botonIngresar2);
@@ -193,13 +181,16 @@ public class MainActivity extends AppCompatActivity {
                     txtCorreo2.setError(null);
 
                     String passwordFromDB = null;
+                    String nameFromDB = null;
                     for (DataSnapshot userSnapshot : snapshot.getChildren()) {
                         passwordFromDB = userSnapshot.child("password").getValue(String.class);
+                        nameFromDB = userSnapshot.child("name").getValue(String.class);
                     }
 
                     if(passwordFromDB.equals(password)){
                         txtCorreo2.setError(null);
                         Intent intent = new Intent(MainActivity.this, ListadoDoctor.class);
+                        intent.putExtra("name", nameFromDB);
                         startActivity(intent);
                     }else{
                         txtPassword2.setError("Contraseña incorrecta");
