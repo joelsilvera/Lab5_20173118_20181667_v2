@@ -10,7 +10,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="56dp"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.02"
@@ -19,6 +18,7 @@
         android:textColor="#198eb6"
         android:textSize="26sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,12 +115,13 @@
 
     <Button
         android:id="@+id/botonIngresar2"
-        android:layout_width="268dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="68dp"
+        android:layout_width="219dp"
+        android:layout_height="49dp"
         android:layout_marginTop="532dp"
+        android:backgroundTint="@color/turquesa"
         android:backgroundTintMode="add"
         android:text="Registrarse"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,6 +154,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="24dp"
         android:text="Ya tienes una cuenta? Ingresa"
+        android:textColor="@color/turquesa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonFacebook" />
 
